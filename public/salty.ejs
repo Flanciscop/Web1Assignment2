@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Item Page 1</title>
+        <style media="screen">
+            li{display: inline-block;color: #F0F0F0;text-shadow: 0 0 1px #666666;font-size:30px;}
+            .highlight, .selected {color:#F4B30A;text-shadow: 0 0 1px #F48F0A;}
+        </style>
+        <link rel="stylesheet" href="/assets/salty.css">
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <script type="text/javascript" src="/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/js/jquery.comment.js"></script>
+        <script type="text/javascript" src="/js/salty.js"></script>
+    </head>
+    <body>
+        <div class="top">
+            <h1>BITE ME</h1>
+        </div>
+        <div class="menu" id="menu">
+            <a href="/home" class="active">Home</a>
+            <a href="/salty">Salty</a>
+            <a href="/sweet">Sweet</a>
+            <a href="/contactUs">Contact Us</a>
+            <a href="javascript:void(0);" class="icon" onclick="navigation()">
+            <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <table id = "mytable">
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Image</th>
+                <th>Rating</th>
+            </tr>
+            <tr>
+                <td><%= data[0].Name %></td>
+                <td><%= data[0].Description %></td>
+                <td><img src="<%= data[0].Image %>"/></td>
+                <td>
+                    <div class="stars" data-rating="">
+                        <span class="star">&nbsp;</span>
+                        <span class="star">&nbsp;</span>
+                        <span class="star">&nbsp;</span>
+                        <span class="star">&nbsp;</span>
+                        <span class="star">&nbsp;</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><%= data[1].Name %></td>
+                <td><%= data[1].Description %></td>
+                <td><img src="<%= data[1].Image %>"/></td>
+                <td>
+                    <div class="bstars" data-rating="">
+                        <span class="bstar">&nbsp;</span>
+                        <span class="bstar">&nbsp;</span>
+                        <span class="bstar">&nbsp;</span>
+                        <span class="bstar">&nbsp;</span>
+                        <span class="bstar">&nbsp;</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><%= data[2].Name %></td>
+                <td><%= data[2].Description %></td>
+                <td><img src="<%= data[2].Image %>"/></td>
+                <td>
+                    <div class="cstars" data-rating="">
+                        <span class="cstar">&nbsp;</span>
+                        <span class="cstar">&nbsp;</span>
+                        <span class="cstar">&nbsp;</span>
+                        <span class="cstar">&nbsp;</span>
+                        <span class="cstar">&nbsp;</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><%= data[3].Name %></td>
+                <td><%= data[3].Description %></td>
+                <td><img src="<%= data[3].Image %>"/></td>
+                <td>
+                    <div class="dstars" data-rating="">
+                        <span class="dstar">&nbsp;</span>
+                        <span class="dstar">&nbsp;</span>
+                        <span class="dstar">&nbsp;</span>
+                        <span class="dstar">&nbsp;</span>
+                        <span class="dstar">&nbsp;</span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="container1">
+            <div class="commentbox">
+                <textarea cols="80" rows="50" placeholder="Comment" class="mytextarea" id="content"></textarea>
+                <div class="btnc btn-info pull-right" id="comment">Submit</div>
+            </div>
+            <div class="comment-list">
+            </div>
+        </div>
+    </body>
+</html>
